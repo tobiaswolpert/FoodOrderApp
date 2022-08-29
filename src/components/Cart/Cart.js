@@ -16,7 +16,7 @@ const Cart = (props) => {
       {cartCtx.items.map((item) => (
         <CartItem
           {...item}
-          onAdd={() => cartCtx.addItem(item)}
+          onAdd={() => cartCtx.addItem({ ...item, amount: 1 })}
           onRemove={() => cartCtx.removeItem(item.id)}
         >
           {item.name}

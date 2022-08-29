@@ -14,7 +14,7 @@ const cartReducer = (state, action) => {
     if (existingCardItem === -1) {
       updatedItems.push(action.value);
     } else {
-      updatedItems[existingCardItem].amount += 1;
+      updatedItems[existingCardItem].amount += action.value.amount;
     }
 
     const updatedTotal =
